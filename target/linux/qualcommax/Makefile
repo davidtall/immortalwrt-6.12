@@ -12,17 +12,12 @@ KERNEL_PATCHVER:=6.12
 
 include $(INCLUDE_DIR)/target.mk
 DEFAULT_PACKAGES += \
-	autocore cpufreq e2fsprogs f2fsck mkf2fs losetup luci uboot-envtools wpad-openssl \
-	kmod-fs-ext4 kmod-fs-f2fs kmod-gpio-button-hotplug kmod-leds-gpio kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom \
-	kmod-ath11k kmod-ath11k-ahb kmod-ath11k-pci kmod-phy-aquantia kmod-phy-qca83xx kmod-dsa kmod-dsa-qca8k kmod-dsa-tag-dsa \
-	kmod-qca-nss-dp \
-	kmod-qca-nss-drv \
-	kmod-qca-nss-drv-bridge-mgr \
-	kmod-qca-nss-drv-lag-mgr \
-	kmod-qca-nss-drv-pppoe \
-	kmod-qca-nss-drv-pptp \
-	kmod-qca-nss-drv-vlan-mgr \
-	kmod-qca-nss-ecm \
-	kmod-qca-nss-mcs
+	kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom uboot-envtools\
+	kmod-leds-gpio kmod-gpio-button-hotplug \
+	kmod-qca-nss-dp kmod-ath11k-ahb \
+	wpad-openssl uboot-envtools \
+	e2fsprogs kmod-fs-ext4 losetup autocore cpufreq \
+	kmod-qca-nss-drv kmod-qca-nss-ecm \
+	kmod-qca-nss-drv-bridge-mgr
 
 $(eval $(call BuildTarget))
